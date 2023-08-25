@@ -19,7 +19,7 @@ const mutations = {
 const actions = {
   async fetchProducts({ commit }) {
     try {
-      const response = await axios.get('https://fakestoreapi.com/products');
+      const response = await axios.get('https://fakestoreapi.com/products')
       commit('setProducts', response.data);
     } catch (error) {
       commit('setError', error);
@@ -30,6 +30,9 @@ const actions = {
 const getters = {
   getProducts: state => state.products,
   getError: state => state.error,
+  getProductById: state => id => {
+    return state.products.find(product => product.id === id);
+  },
 };
 
 export default new Vuex.Store({

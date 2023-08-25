@@ -7,7 +7,7 @@
         <!-- Nav Links -->
         <ul class="flex space-x-4">
           <li>
-            <router-link to="/" class="text-white hover:text-gray-300">Home</router-link>
+            <router-link to="/products" class="text-white hover:text-gray-300">Products</router-link>
           </li>
           <li>
             <router-link to="/about" class="text-white hover:text-gray-300">About</router-link>
